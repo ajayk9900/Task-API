@@ -1,0 +1,667 @@
+{
+	"info": {
+		"_postman_id": "7eb2d80c-64de-417f-9164-2e2be4a0bda9",
+		"name": "Version Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31679831"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "raj",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "raj1@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "confirm_password",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/r23/Downloads/gettyimages-469438807-612x612.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/admin/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"admin",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "raj@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/admin/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"admin",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Admin Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBZG1pbkRhdGEiOnsiX2lkIjoiNjU4MmE5ZGU2ZTE4OTk4OWI4NWIwOTZkIiwidXNlcm5hbWUiOiJyYWoxIiwiZW1haWwiOiJyYWoxQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJEdPZ202ZWVYSTV5ajdhcVdsbXoxNk83SGV5cnJ4UE5sRndxNC5mV3IwOWtBbzFVWktDOTVhIiwiaW1hZ2UiOiIvdXBsb2Fkcy9BZG1pbi9pbWFnZS0xNzAzMDYxOTgyNDUyIiwiX192IjowfSwiaWF0IjoxNzAzMDY2MzM3LCJleHAiOjE3MDMwNjk5Mzd9.MNC6o0iOtlvJ6T6q81JEgVxMqS57EhXR3RO56PNUc1A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/admin/permission/getAllAdminData",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"admin",
+								"permission",
+								"getAllAdminData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBZG1pbkRhdGEiOnsiX2lkIjoiNjU4MTg1ZTk2ZTRlMDg0MjI1YzQ5M2RhIiwidXNlcm5hbWUiOiJSYWoiLCJlbWFpbCI6InJhakBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRFU0VDU0N2WlkuL3NzNVM0Ly5tNTMuSGpPUHZGNVhkbnpJNk5PS0lkQXM1SzdEb2FuZFNucSIsImltYWdlIjoiL3VwbG9hZHMvQWRtaW4vaW1hZ2UtMTcwMzE0NjAxMDc1MSIsIl9fdiI6MH0sImlhdCI6MTcwMzE0NzM0MiwiZXhwIjoxNzAzMTUwOTQyfQ.eXIyDib5Y39RUOyhHgJB28CSbQGhrfQ_aeap5VcO2Jk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:8001/admin/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"admin",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBZG1pbkRhdGEiOnsiX2lkIjoiNjU4MTg1ZTk2ZTRlMDg0MjI1YzQ5M2RhIiwidXNlcm5hbWUiOiJSYWoga3VtYXIiLCJlbWFpbCI6InJhakBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRFU0VDU0N2WlkuL3NzNVM0Ly5tNTMuSGpPUHZGNVhkbnpJNk5PS0lkQXM1SzdEb2FuZFNucSIsImltYWdlIjoiL3VwbG9hZHMvQWRtaW4vaW1hZ2UtMTcwMjk4NzI0MTUzNiIsIl9fdiI6MH0sImlhdCI6MTcwMzE0NTA5NywiZXhwIjoxNzAzMTQ4Njk3fQ.mLQLc5OwPysVaPpFpl2VB-6NceXdV_PJ4EkluCJW9lk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "Raja",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "raj@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/r23/Pictures/Screenshots/Screenshot (40).png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/admin/editProfile/658185e96e4e084225c493da",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"admin",
+								"editProfile",
+								"658185e96e4e084225c493da"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Manager Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBZG1pbkRhdGEiOnsiX2lkIjoiNjU4MmE5ZGU2ZTE4OTk4OWI4NWIwOTZkIiwidXNlcm5hbWUiOiJyYWoiLCJlbWFpbCI6InJhajFAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkR09nbTZlZVhJNXlqN2FxV2xtejE2TzdIZXlycnhQTmxGd3E0LmZXcjA5a0FvMVVaS0M5NWEiLCJpbWFnZSI6Ii91cGxvYWRzL0FkbWluL2ltYWdlLTE3MDMwNjE5ODI0NTIiLCJfX3YiOjB9LCJpYXQiOjE3MDMwNjE5OTQsImV4cCI6MTcwMzA2NTU5NH0.rrAo71Qxn7DubbZsx85hU9cf4vDKnmKVFgVYKr5r6ao",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/admin/getAllManagerDetails",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"admin",
+								"getAllManagerDetails"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Manager",
+			"item": [
+				{
+					"name": "Add Manager By Admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBZG1pbkRhdGEiOnsiX2lkIjoiNjU4MTg1ZTk2ZTRlMDg0MjI1YzQ5M2RhIiwidXNlcm5hbWUiOiJSYWoga3VtYXIiLCJlbWFpbCI6InJhakBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRFU0VDU0N2WlkuL3NzNVM0Ly5tNTMuSGpPUHZGNVhkbnpJNk5PS0lkQXM1SzdEb2FuZFNucSIsImltYWdlIjoiL3VwbG9hZHMvQWRtaW4vaW1hZ2UtMTcwMjk4NzI0MTUzNiIsIl9fdiI6MH0sImlhdCI6MTcwMzE0NTgyMiwiZXhwIjoxNzAzMTQ5NDIyfQ.mxbUMTtIGGWzchNT2BqpnglinpwV-Qger578ymoqDq4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "Ajay",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "ajaykumawat9981@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "confirm_password",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/r23/Pictures/Screenshots/Screenshot (20).png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/admin/manager/addManager",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"admin",
+								"manager",
+								"addManager"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "ajaykumawat9904@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/admin/manager/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"admin",
+								"manager",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Manager Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYW5hZ2VyRGF0YSI6eyJfaWQiOiI2NTgyOWI4MTBhZGFjZmE3MmVjYmQwNGQiLCJ1c2VybmFtZSI6IkFqYXkiLCJlbWFpbCI6ImFqYXlrdW1hd2F0OTkwNEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRSREl3d3MzUmFtSS9zVXVCQkV6NEN1cHVoLklnYUpzdXVvc3p1QkswQTBHQTlOemNLdTYwNiIsImltYWdlIjoiL3VwbG9hZHMvTWFuYWdlci9pbWFnZS0xNzAzMDU4MzA1NzcxIiwiX192IjowfSwiaWF0IjoxNzAzMDYyMDM2LCJleHAiOjE3MDMwNjU2MzZ9.QkYApPEy-4D4oO6hnq_O8zbPng58tOYxDvCSSo4jBgg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/admin/manager/getAllManagerData",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"admin",
+								"manager",
+								"getAllManagerData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYW5hZ2VyRGF0YSI6eyJfaWQiOiI2NTgzZjY5MTNiNTBkOTYyMGFiYTQxMDEiLCJ1c2VybmFtZSI6IkFqYXkiLCJlbWFpbCI6ImFqYXlrdW1hd2F0OTk4MUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRKR1dPTDFZL25zY25OeGM1ZktvTC9lWUdJL0JYa0wvWWNoc3pVcS9wQkZrbjdpVTdqNHc3YSIsImltYWdlIjoiL3VwbG9hZHMvTWFuYWdlci9pbWFnZS0xNzAzMTQ3MTUxNjkwIiwiX192IjowfSwiaWF0IjoxNzAzMTQ3MTY3LCJleHAiOjE3MDMxNTA3Njd9.36PhsH9pYdA3t5IUki803uSJiViEIxuOq3-rjEpE4wY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/admin/manager/managerProfile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"admin",
+								"manager",
+								"managerProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Manager Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYW5hZ2VyRGF0YSI6eyJfaWQiOiI2NTgzZjY5MTNiNTBkOTYyMGFiYTQxMDEiLCJ1c2VybmFtZSI6IkFqYXkiLCJlbWFpbCI6ImFqYXlrdW1hd2F0OTk4MUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRKR1dPTDFZL25zY25OeGM1ZktvTC9lWUdJL0JYa0wvWWNoc3pVcS9wQkZrbjdpVTdqNHc3YSIsImltYWdlIjoiL3VwbG9hZHMvTWFuYWdlci9pbWFnZS0xNzAzMTQ3MTUxNjkwIiwiX192IjowfSwiaWF0IjoxNzAzMTQ3MTY3LCJleHAiOjE3MDMxNTA3Njd9.36PhsH9pYdA3t5IUki803uSJiViEIxuOq3-rjEpE4wY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "ajay",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "ajaykumawat9904@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/r23/Pictures/Screenshots/Screenshot (38).png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/admin/manager/EditmanagerProfile/6583f6913b50d9620aba4101",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"admin",
+								"manager",
+								"EditmanagerProfile",
+								"6583f6913b50d9620aba4101"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All User Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYW5hZ2VyRGF0YSI6eyJfaWQiOiI2NTgzZjY5MTNiNTBkOTYyMGFiYTQxMDEiLCJ1c2VybmFtZSI6ImFqYXkiLCJlbWFpbCI6ImFqYXlrdW1hd2F0OTkwNEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRKR1dPTDFZL25zY25OeGM1ZktvTC9lWUdJL0JYa0wvWWNoc3pVcS9wQkZrbjdpVTdqNHc3YSIsImltYWdlIjoiL3VwbG9hZHMvTWFuYWdlci9pbWFnZS0xNzAzMTQ3MjQ1MTU5IiwiX192IjowfSwiaWF0IjoxNzAzMTQ4MzAyLCJleHAiOjE3MDMxNTE5MDJ9.UGrGhoFbSXqrF6MmkJp-qBFzD1EXAA2D40P7A3uonDw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/admin/manager/getAllUserData",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"admin",
+								"manager",
+								"getAllUserData"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Add User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "ram",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "ram@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "confirm_password",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "userImage",
+									"type": "file",
+									"src": "/C:/Users/r23/Pictures/Screenshots/Screenshot (48).png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/user/addUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"user",
+								"addUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "shyam@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/user/userLogin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"user",
+								"userLogin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRGF0YSI6eyJfaWQiOiI2NTgzZjg5MmQ3ODMzYjg4ZWZjYmRlNDQiLCJ1c2VybmFtZSI6InJhbSIsImVtYWlsIjoicmFtQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJEJsOUZIL2NtNHJqREpsUU40bVlIV3UxMUJ2RjJJRzRCSklnSVRDb0FCdkdxTjNyMFIzTU4yIiwidXNlckltYWdlIjoiL3VwbG9hZHMvVXNlci91c2VySW1hZ2UtMTcwMzE0NzY2NTk2MyIsIl9fdiI6MH0sImlhdCI6MTcwMzE0NzcwOCwiZXhwIjoxNzAzMTUxMzA4fQ.x3ERXKXcGMn39KOQMTXkyoe7WnIS3vWqMwjUZ61xUG0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/user/userProfile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"user",
+								"userProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRGF0YSI6eyJfaWQiOiI2NTgzZjg5MmQ3ODMzYjg4ZWZjYmRlNDQiLCJ1c2VybmFtZSI6InJhbSIsImVtYWlsIjoicmFtQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJEJsOUZIL2NtNHJqREpsUU40bVlIV3UxMUJ2RjJJRzRCSklnSVRDb0FCdkdxTjNyMFIzTU4yIiwidXNlckltYWdlIjoiL3VwbG9hZHMvVXNlci91c2VySW1hZ2UtMTcwMzE0NzY2NTk2MyIsIl9fdiI6MH0sImlhdCI6MTcwMzE0NzcwOCwiZXhwIjoxNzAzMTUxMzA4fQ.x3ERXKXcGMn39KOQMTXkyoe7WnIS3vWqMwjUZ61xUG0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "shyam",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "shyam@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "userImage",
+									"type": "file",
+									"src": "/C:/Users/r23/Downloads/gettyimages-463707693-612x612.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8001/user/editProfile/6583f892d7833b88efcbde44",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"user",
+								"editProfile",
+								"6583f892d7833b88efcbde44"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
